@@ -23,7 +23,7 @@ const server = require("http").createServer(app);
 
 app.use("/user", require("./routes/User"));
 
-// app.use("/", require("./routes/home"));
+app.use("/", require("./routes/home"));
  
 app.use((req, res, next) => {
     const error = new Error("Not found");
